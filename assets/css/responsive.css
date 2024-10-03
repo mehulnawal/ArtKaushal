@@ -1,0 +1,90 @@
+/* laptop */
+@media (max-width: 1399px) {
+}
+
+/* ipad */
+@media (max-width: 1199px) {
+  .features {
+    font-size: 30px;
+  }
+
+  .navbar-right {
+  }
+}
+
+/* tablet */
+@media (max-width: 991px) {
+  .features {
+    font-size: 20px;
+  }
+}
+
+/* mobile horizontal*/
+@media (max-width: 771px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .popular-courses p {
+    font-size: 20px;
+  }
+
+  .popular-courses img {
+    width: 100px;
+  }
+
+  .features {
+    font-size: 16px;
+  }
+}
+
+/* mobile vertical */
+@media (max-width: 576px) {
+  .navbar .nav-links li {
+    font-size: 19px;
+  }
+
+  .slide-1-img {
+    width: 180px;
+  }
+
+  .slide-2-img {
+    width: 250px;
+  }
+
+  .features {
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+  .slide-3-img {
+    width: 230px;
+  }
+
+  .img-animations {
+    width: 260px;
+    height: 220px;
+    margin-bottom: 30px;
+  }
+
+  .carousel-indicators {
+    bottom: -85px;
+  }
+
+  .carousel {
+    height: 100%;
+    margin-bottom: 130px;
+  }
+
+  .carousel-item h5 {
+    font-size: 20px;
+  }
+
+  .carousel-item p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 476px) {
+}
