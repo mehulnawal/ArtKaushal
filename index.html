@@ -28,24 +28,24 @@
   <link rel="stylesheet" href="./assets/css/responsive.css" />
 </head>
 
-<body class="">
+<body class="loading">
   <!-- loader start -->
-  <!-- <div
-        class="page-loader d-flex flex-column justify-content-center align-items-center text-white bg-black gap-3 fs-2 user-select-none">
-        <div>
-            <img class="logo" src="./assets/imgae/art_kaushal_logo_orginal2-removebg-preview.png" alt="logo_png">
-        </div>
+  <div
+    class="page-loader d-flex flex-column justify-content-center align-items-center text-white bg-black gap-3 fs-2 user-select-none">
+    <div>
+      <img class="logo" src="./assets/imgae/art_kaushal_logo_orginal2-removebg-preview.png" alt="logo_png">
+    </div>
 
-        <div class="loader-content d-flex justify-content-center align-items-center">
-            <div class="loader-text">L</div>
-            <div class="loader-text">O</div>
-            <div class="loader-text">A</div>
-            <div class="loader-text">D</div>
-            <div class="loader-text">I</div>
-            <div class="loader-text">N</div>
-            <div class="loader-text">G</div>
-        </div>
-    </div> -->
+    <div class="loader-content d-flex justify-content-center align-items-center">
+      <div class="loader-text">L</div>
+      <div class="loader-text">O</div>
+      <div class="loader-text">A</div>
+      <div class="loader-text">D</div>
+      <div class="loader-text">I</div>
+      <div class="loader-text">N</div>
+      <div class="loader-text">G</div>
+    </div>
+  </div>
   <!-- loader end -->
 
   <!-- header start -->
@@ -438,14 +438,14 @@
   <!-- Jquery script js -->
   <script src="./assets/js/jquery-3.7.1.min.js"></script>
 
-  <!-- script -->
+  <!--loader script -->
   <script>
-    // loader
     $(window).on("load", function () {
       $(".page-loader")
         .delay(3000)
         .fadeOut(500, function () {
-          $("body").removeClass("loading"), 3000;
+          $("body").removeClass("loading"); // Remove 'loading' class once
+          $(".page-loader").remove(); // Ensure loader is fully removed from DOM
         });
     });
   </script>
@@ -545,5 +545,6 @@
     }
   </script>
 </body>
+
 
 </html>

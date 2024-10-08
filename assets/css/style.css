@@ -57,6 +57,7 @@ header {
   height: 100vh;
   width: 100vw;
   font-family: var(--roboto);
+  z-index: 99;
 }
 
 .page-loader .logo {
@@ -178,7 +179,7 @@ header nav .logo {
   transform: rotate(180deg);
 }
 
-.offcanvas-icons:hover{
+.offcanvas-icons:hover {
   opacity: 0.8;
 }
 
@@ -466,6 +467,6 @@ footer .logo {
   color: white;
 }
 
-body.body-bg-change footer{
-    color: white;
+body.body-bg-change footer {
+  color: white;
 }

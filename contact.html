@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Art Kaushal | Contact-us</title>
+    <title>Art Kaushal | Contact</title>
 
     <!-- Bootstrap icons -->
     <link rel="stylesheet" href="./assets/css/bootstrap-icons.css" />
@@ -26,11 +26,14 @@
 
     <!-- responsive css link -->
     <link rel="stylesheet" href="./assets/css/responsive.css" />
+
+    <!-- contact css link -->
+    <link rel="stylesheet" href="./assets/css/contact.css">
 </head>
 
 <body>
     <!-- header start -->
-    <header class="w-100">
+    <header class="w-100 position-fixed top-0 z-2">
         <!-- navbar start -->
         <nav>
             <div class="container">
@@ -164,10 +167,62 @@
     </header>
     <!-- header end -->
 
+    <!-- banner start -->
+    <section class="banner-main d-flex  justify-content-between align-items-center">
+        <div class="container d-flex justify-content-center justify-content-lg-between">
+
+            <img class="shape1 me-5 me-lg-0" src="./assets/imgae/shape1 (1).png" alt="shape-1-img">
+
+            <div class="about-title">
+                <h1 class="fw-semibold">Contact us</h1>
+                <div class="breadcumb">
+                    <a class="text-black fs-5" href="./index.html">Home -</a>
+                    <span class="fs-5 bcd-inner fw-semibold ">Contact</span>
+                </div>
+            </div>
+
+            <img class="shape2 d-none d-lg-block" src="./assets/imgae/shape3.png" alt="shape-2-img">
+        </div>
+    </section>
+    <!-- banner end -->
+
     <!-- main start -->
-    <main class="text-center">
-        <h1>This is Contact-us page </h1>
-        <h3>Under construction</h3>
+    <main class="">
+        <div class="container">
+
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-12">
+                    <img class="form-img img-fluid" src="./assets/imgae/form-removebg-preview.png" alt="">
+                </div>
+
+                <div class="col-lg-6 col-12">
+                    <div class="contact">
+                        <h2 class="text-center fs-3">Contact us</h2>
+                        <form id="contactForm"
+                            action="https://script.google.com/macros/s/AKfycbzyPPTsyASHwCz6n926EU52kbiqkZzX1hr7kN-8ArwuqFRqe7-mOxanSpg_22cwKiabzg/exec"
+                            method="post">
+                            <label for="name" class="form-label fs-5">Name: </label>
+                            <input type="text" name="name" class="form-control mb-4">
+
+                            <label for="email" class="form-label fs-5">Email: </label>
+                            <input type="text" name="email" id="email" class="form-control mb-4">
+
+                            <label for="message" class="form-label fs-5">Message: </label>
+                            <textarea class="form-control fs-5" name="message" cols="10" rows="5"></textarea>
+
+                            <button class="btn btn-success mt-4 w-100" type="submit">Submit</button>
+                            <div id="successMessage" style="display:none; color: green; margin-top: 20px;">
+                                Form submitted successfully!
+                            </div>
+                            <div id="successMessage">
+                                Form submitted successfully!
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
     <!-- main end -->
 
@@ -340,6 +395,77 @@
             }
         }
     </script>
+
+    <!--excel sheet data -  js script  -->
+    <script>
+        $('#contactForm').on('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Perform validation
+            const name = $('input[name="name"]').val().trim();
+            const email = $('input[name="email"]').val().trim();
+            const message = $('textarea[name="message"]').val().trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const nameRegex = /^[A-Za-z\s]+$/; // Only letters and spaces allowed
+
+            // Reset previous success message
+            const successMessage = $('#successMessage');
+            successMessage.hide();
+
+            // Validate form inputs
+            if (name === '') {
+                alert('Please enter your name.');
+                return false;
+            }
+
+            if (!nameRegex.test(name)) {
+                alert('Name should only contain letters and spaces.');
+                return false;
+            }
+
+            if (email === '' || !emailRegex.test(email)) {
+                alert('Please enter a valid email.');
+                return false;
+            }
+
+            if (message === '') {
+                alert('Please enter your message.');
+                return false;
+            }
+
+            // If validation passes, submit form via AJAX
+            $.ajax({
+                url: "https://script.google.com/macros/s/AKfycbzyPPTsyASHwCz6n926EU52kbiqkZzX1hr7kN-8ArwuqFRqe7-mOxanSpg_22cwKiabzg/exec",
+                data: $('#contactForm').serialize(),
+                method: "POST",
+                success: function (response) {
+                    // Show success message
+                    successMessage.css({
+                        'display': 'block',
+                        'color': 'white',
+                        'background-color': 'green',
+                        'font-size': '24px',
+                        'text-align': 'center',
+                        'padding': '10px',
+                        'margin-top': '20px'
+                    }).text('Form submitted successfully!');
+
+                    // Clear form fields
+                    $('#contactForm')[0].reset();
+
+                    // Hide the success message after 3 seconds
+                    setTimeout(function () {
+                        successMessage.hide();
+                    }, 3000);
+                },
+                error: function (err) {
+                    alert('There was an error submitting the form.');
+                }
+            });
+        });
+    </script>
+
+
 </body>
 
 </html>

@@ -1,0 +1,183 @@
+/* common css start */
+:root {
+    --roboto: "Roboto", sans-serif;
+    --merriweather: "Merriweather", serif;
+    --header-bg: #334257;
+    --body-bg: #fbf8f2;
+    --offcanvas-bg: #9fd1b3;
+    --white: #f5f5f5;
+    --black: #000;
+}
+
+/* pencil calligraphy font  fredericka-the-great-regular*/
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+/* common css end */
+
+
+/* banner start */
+.banner-main {
+    background: url('../imgae/about_us_bg.webp');
+    background-position: top;
+    background-size: cover;
+    font-family: '--roboto';
+    width: 100%;
+    height: 100vh;
+}
+
+.bcd-inner {
+    color: #8A47CB;
+}
+
+.banner-certificate {
+    width: 120px;
+    animation: zoomin 1.2s linear 2s infinite;
+}
+
+.banner-graduation {
+    width: 100px;
+    height: 50px;
+    animation: zoomin 1.2s linear infinite;
+}
+
+@keyframes zoomin {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.06);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* banner end */
+
+/* courses start */
+.card {
+    height: 400px;
+    background-color: #F5D093;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: var(--merriweather);
+}
+
+.card-image {
+    height: 258px;
+    background: url('../imgae/std.jpg');
+    background-size: cover;
+    background-position: contain;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+.card2-image {
+    background: url('../imgae/chemistry.webp');
+    background-size: cover;
+}
+
+.card3-image {
+    background: url('../imgae/pencil_calligraphy.png');
+    background-size: cover;
+}
+
+.card4-image {
+    background: url('../imgae/Cut_nib_calligraphy.jpg');
+    background-size: cover;
+}
+
+.card5-image {
+    background: url('../imgae/vedic_maths.png');
+    background-size: cover;
+}
+
+.card7-image {
+    background: url('../imgae/handwriting.jpeg');
+    background-size: cover;
+}
+
+.card8-image {
+    background: url('../imgae/Mandala.jpg');
+    background-size: cover;
+}
+
+.card6-image {
+    background: url('../imgae/brush.jpg');
+    background-size: cover;
+}
+
+.card9-image {
+    background: url('../imgae/Devanagari.jpg');
+    background-size: cover;
+}
+
+.card10-image {
+    background: url('../imgae/drawing.png');
+    background-size: cover;
+}
+
+.course-title {
+    font-family: var(--roboto);
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.card3 .course-title {
+    font-family: "Fredericka the Great", serif;
+}
+
+.card .bi-whatsapp {
+    color: green;
+}
+
+.card .bi-bar-chart-fill {
+    color: #44B3A8;
+}
+
+.card .bi-telephone-fill {
+    /* color: ; */
+}
+
+.card:hover .card-image {
+    transform: scale(1.04);
+}
+
+.card:hover .course-title {
+    color: #338E75;
+}
+
+/* courses end */
+
+/* certificate start */
+.certificate {
+    background-color: #066CCB;
+    padding: 70px 30px;
+    height: 300px;
+}
+
+@media (max-width:1199px) {
+    .certificate {
+        background-color: #066CCB;
+        padding: 50px 10px;
+    }
+
+    .banner-main {
+        /* height: 80vh; */
+    }
+}
+
+.bi-dot {
+    font-size: 50px;
+}
+
+.certificate-2-img {
+    width: 300px;
+    margin-top: -150px;
+}
+
+/* certificate end */

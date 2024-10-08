@@ -18,6 +18,10 @@
     <!-- Roboto font link -->
     <link rel="stylesheet" href="./assets/fonts/roboto-v32-latin-regular.woff2" />
 
+    <!-- swiper js link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
     <!-- Bootstrap css link -->
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
 
@@ -26,11 +30,14 @@
 
     <!-- responsive css link -->
     <link rel="stylesheet" href="./assets/css/responsive.css" />
+
+    <!-- about us cs link -->
+    <link rel="stylesheet" href="./assets/css/about.css">
 </head>
 
 <body>
     <!-- header start -->
-    <header class="w-100">
+    <header class="w-100 position-fixed top-0 z-2">
         <!-- navbar start -->
         <nav>
             <div class="container">
@@ -93,7 +100,7 @@
                 <div class="offcanvas-body px-3">
                     <!-- <div class="" ></div> -->
                     <div class="d-flex align-items-center justify-content-between">
-                        <img class="w-25" src="./assets/imgae/logo-removebg-preview.png" alt="">
+                        <img class="w-25" src="./assets/imgae/logo-removebg-preview.png" alt="logo-img">
 
                         <div class="close-btn px-2 py-1 rounded" data-bs-dismiss="offcanvas">
                             <i class="bi bi-x-lg"></i>
@@ -165,9 +172,176 @@
     <!-- header end -->
 
     <!-- main start -->
-    <main class="text-center">
-        <h1>This is about page </h1>
-        <h3>Under construction</h3>
+    <main>
+        <!-- banner start -->
+        <section class="banner-main d-flex justify-content-between align-items-center">
+            <div class="container d-flex justify-content-between">
+
+                <img class="banner-arrow" src="./assets/imgae/about-us-banner-img1.svg" alt="arrow-img">
+
+                <div class="about-title">
+                    <h1 class="fw-semibold">About Us</h1>
+                    <div class="breadcumb">
+                        <a class="text-black fs-5" href="./index.html">Home -</a>
+                        <span class="fs-5 bcd-inner fw-semibold ">About us</span>
+                    </div>
+                </div>
+
+                <img class="banner-book" src="./assets/imgae/about-us-banner-img2.svg" alt="book-img">
+            </div>
+        </section>
+        <!-- banner end -->
+
+        <!-- about artKaushal start -->
+        <section class="about container mb-4">
+            <div class="row align-items-center w-100 position-relative">
+                <div class="col-lg-6 col-12 d-flex justify-content-center justify-content-lg-start">
+                    <div class="box rounded-3">
+                        <img src="./assets/imgae/EducationLoan_Keybenefits.png" alt="student-img">
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-12 mb-0 mt-5 mt-lg-0 ">
+                    <h6 class="align-self-start">About ArtKaushal</h6>
+                    <h2 class="">The Place Where You Can Achieve</h2>
+                    <p>Welcome to ArtKaushal, where learning knows no bounds. Whether you're a student, professional, or
+                        lifelong learner...</p>
+                    <div class="mt-3">
+                        <div class="d-flex gap-3 mb-2">
+                            <img src="./assets/imgae/tick-img.svg" alt="">
+                            <h4 class="mb-0">Flexible learning</h4>
+                        </div>
+
+                        <div class="d-flex gap-3 mb-2">
+                            <img src="./assets/imgae/tick-img.svg" alt="">
+                            <h4 class="mb-0">Expert Guidance</h4>
+                        </div>
+
+                        <div class="d-flex gap-3 mb-2">
+                            <img src="./assets/imgae/tick-img.svg" alt="">
+                            <h4 class="mb-0">Diverse Courses</h4>
+                        </div>
+
+                        <div class="d-flex gap-3 mb-2">
+                            <img src="./assets/imgae/tick-img.svg" alt="">
+                            <h4 class="mb-0">Innovative Teaching</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about artKaushal end -->
+
+        <!-- why choose us start -->
+        <section class="choose-us container mt-5">
+            <div class="row align-items-center">
+                <div
+                    class="col-6 col-lg-6 col-12 d-flex flex-column justify-content-center justify-content-lg-start order-1 order-lg-0 mt-5 mt-lg-0">
+                    <h5 class="mb-2 why-choose-title text-white">Why Choose us </h5>
+                    <h2 class="fs-3">One platform and Many courses for you</h2>
+                    <p class="mt-3">At ArtKaushal, you can choose courses based on your interests and work towards
+                        mastering your
+                        chosen field, earning a certificate of completion along the way. We offer flexible teaching
+                        methods, a friendly learning environment, and a comprehensive knowledge base to ensure your
+                        success.</p>
+
+                    <div class="choose-inner">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="fw-normal fs-6">Complete knowledge</h5>
+                            <h5 class="fw-normal fs-6">95%</h5>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <h5 class="fw-normal fs-6">Learning environment</h5>
+                            <h5 class="fw-normal fs-6">95%</h5>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <h5 class="fw-normal fs-6">Innovative teaching</h5>
+                            <h5 class="fw-normal fs-6">95%</h5>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-6 col-lg-6 col-12 d-flex justify-content-center justify-content-lg-start">
+                    <img class="w-75" src="./assets/imgae/study-india-img__1_-removebg-preview-removebg-preview.png"
+                        alt="student-img">
+                </div>
+
+                <!-- testimonial start -->
+                <div></div>
+                <!-- testimonial end -->
+
+                <div class="col-6"></div>
+            </div>
+        </section>
+        <!-- why choose us end -->
+
+        <!-- testimonials start -->
+        <div class="swiper mySwiper pb-0 mb-0">
+            <h3 class="mb-4 text-center testimonials-title">What are students say about us- </h3>
+
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <h5>
+                        Shruti's calligraphy is fascinating, i wish I can learn using different pens. Art kaushal is a
+                        place where people describe themselves in different form and how to describe is taught by my
+                        friend <span>#talentedShruti</span>
+
+                        <p class="mt-4 fw-semibold testimonial-name mb-5"> - Mohit</p>
+
+                    </h5>
+
+                </div>
+
+                <div class="swiper-slide">
+                    <h5>
+                        Shruti is very concerned for the Name & Pride of Art Kaushal ❤ <span>#highlyrecommended</span>
+
+                        <p class="mt-4 fw-semibold testimonial-name mb-5"> - Yatin</p>
+
+                    </h5>
+
+                </div>
+
+                <div class="swiper-slide">
+                    <h5>
+                        Her teaching methods are great. Very clear and concise.☺
+                        Great experience ♥
+
+                        <p class="mt-4 fw-semibold testimonial-name mb-5"> - Darshana</p>
+
+                    </h5>
+
+                </div>
+
+                <div class="swiper-slide">
+                    <h5>
+                        It was very nice and detailed session and kids enjoyed it a lot that they tried on their own
+                        many names with same pattern they learnt in class...thanks for creating interest in kids
+
+                        <p class="mt-4 fw-semibold testimonial-name mb-5"> - Dhvija</p>
+
+                    </h5>
+
+                </div>
+
+                <div class="swiper-slide">
+                    <h5>
+                        The elegant and appealing artefact, apparently live, emotions are decipherable from the art.
+                        Fabulous work done by you. Amazing. No better word with me to praise
+
+                        <p class="mt-4 fw-semibold testimonial-name mb-5"> - Stuti</p>
+
+                    </h5>
+
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- testimonials end -->
+        </div>
     </main>
     <!-- main end -->
 
@@ -179,7 +353,7 @@
                     <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
                         <a href="./index.html">
                             <img class="logo" src="./assets/imgae/art_kaushal_logo_orginal2-removebg-preview.png"
-                                alt="" />
+                                alt="logo-img" />
                         </a>
 
                         <div class="footer-icons">
@@ -340,6 +514,23 @@
             }
         }
     </script>
+
+    <!-- swiper js script  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper js script -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + (index + 1) + "</span>";
+                },
+            },
+        });
+    </script>
+
 </body>
 
 </html>
