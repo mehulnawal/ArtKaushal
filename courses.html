@@ -191,7 +191,7 @@
         <!-- banner end -->
 
         <!-- courses list view start -->
-        <section class="container">
+        <section class="container courses">
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-12 mt-4 mt-lg-0">
                     <div class="card card1">
@@ -639,6 +639,21 @@
             }
         }
     </script>
+    <!-- 
+    <!-- jquery cdn -->
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- scroll to a particular section  -->
+    <script>
+        $(document).ready(function () {
+            jQuery("html, body").animate({
+                scrollTop: jQuery(".courses").offset().top - 150
+            });
+
+        })
+
+    </script> -->
+
 </body>
 
 </html>
